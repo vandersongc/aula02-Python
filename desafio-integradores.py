@@ -1,18 +1,9 @@
 '''
 Desafio 1- Peça ao usuário a quantidade inicial de produtos em estoque. Use while para permitir registrar vendas e reposições até o usuário digitar “sair”. Ao final, exiba o saldo de produtos.
 '''
-tentativas = 2
-produto = input('Digite o nome do produto: ')
-estoque = int(input('Digite o saldo atual do estoque: '))
-venda = int(input('Quantidade vendida: '))
-estoque_atual = estoque - venda
-estoque_min = 30
-estoque_max = 90
-
-while tentativas > 0:
-    if estoque_atual < estoque_min:
-        print(f'Necessidade de resposição')
-        reposicao = estoque_max -estoque_atual
+while True:
+    saldo_inicial = int(print('Digite o saldo inicial: '))
+    
 
 
 
