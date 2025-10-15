@@ -1,3 +1,6 @@
+'''
+Desafio 1- Peça ao usuário a quantidade inicial de produtos em estoque. Use while para permitir registrar vendas e reposições até o usuário digitar “sair”. Ao final, exiba o saldo de produtos.
+'''
 # --- Desafio 1: Controle de Estoque ---
 
 # 1. Peça ao usuário a quantidade inicial e valide a entrada
@@ -56,3 +59,5 @@ while True:
 print("\n=========================================")
 print(f"O saldo final de produtos em estoque é: {estoque_atual} unidades.")
 print("=========================================")
+    
+
