@@ -11,22 +11,16 @@ while True:
     except ValueError:
         print('\nVocê digitou um valor não válido.\n')
 
-est_atual == est_inicial
+est_atual = int(est_inicial)
 
 while True:
 
     print('\nPara vendas utilize um valor negativo: exemplo: (-10 )')
     print('Para reposição utilize um valor positivo: exemplo: (10 )\n')
 
-    mov_est = input('Digite o valor de: \nVenda; \nreposição, ou \n Sair: ').lower()
+    inp_usuario = input('Digite o valor de: \nVenda; \nreposição, ou \n Sair: ').lower()
 
-    if mov_est == sair:
+    if inp_usuario == sair:
         print('Processo encerrado.')
         break
    
-    try:
-        
-
-
-
- 
