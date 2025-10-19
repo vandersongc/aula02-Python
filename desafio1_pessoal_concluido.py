@@ -6,12 +6,10 @@ print('Controle de Estoque')
 
 while True:
     try:
-        est_inicial = int(input('Digite o estoque atual: '))
+        est_atual = int(input('Digite o estoque atual: '))
         break
     except ValueError:
         print('\nVocê digitou um valor não válido.\n')
-
-est_atual = int(est_inicial)
 
 while True:
 
