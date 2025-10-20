@@ -4,52 +4,54 @@ a média da semana
 a maior temperatura
 a menor temperatura
 '''
-# Desafio 2 – Cálculo de Média de Temperaturas Semanais
+# --- Desafio 2: Média de Temperaturas Semanais ---
 
-# Inicializa uma lista vazia para armazenar as temperaturas
+print("Bem-vindo ao Cálculo de Temperaturas da Semana!")
+print("Por favor, insira a temperatura de cada um dos 7 dias.")
+
+# 1. Criamos uma lista vazia para guardar as temperaturas
 temperaturas = []
-soma_temperaturas = 0.0
 
-print("--- Média de Temperaturas da Semana ---")
+# 2. Usamos um loop 'for' para pedir as 7 temperaturas
+# O range(7) vai gerar números de 0 a 6 (total de 7 repetições)
+for i in range(7):
+    # Usamos um loop 'while True' para garantir que o usuário digite um NÚMERO
+    while True:
+        try:
+            # Pedimos a temperatura. Usamos 'i + 1' para mostrar "Dia 1", "Dia 2", etc.
+            temp_dia = float(input(f"Digite a temperatura do Dia {i + 1}: "))
+            
+            # 3. Adicionamos a temperatura válida à nossa lista
+            temperaturas.append(temp_dia)
+            
+            # Se a conversão para float deu certo, podemos sair do 'while True'
+            break 
+            
+        except ValueError:
+            # Se o usuário digitou um texto (ex: "trinta"), o float() dará um erro.
+            # O 'except' captura esse erro e pede para digitar novamente.
+            print("Entrada inválida. Por favor, digite apenas números (ex: 25.5).")
 
-# Pede as temperaturas de 7 dias usando um laço for
-# O range(7) vai gerar números de 0 a 6, repetindo o bloco 7 vezes.
-for dia in range(7):
-  # Pede ao usuário para inserir a temperatura do dia
-  # Usamos dia + 1 para mostrar "Dia 1", "Dia 2", etc.
-  # float() converte o texto digitado para um número com casas decimais
-  try:
-    temp = float(input(f"Digite a temperatura do Dia {dia + 1}: "))
-    
-    # Adiciona a temperatura digitada na lista 'temperaturas'
-    temperaturas.append(temp)
-    
-  except ValueError:
-    print("Valor inválido. Por favor, digite apenas números.")
-    # Caso o usuário não digite um número, podemos pedir para ele tentar de novo
-    # Aqui, para simplificar, vamos atribuir 0 e continuar.
-    temperaturas.append(0.0)
+print("-" * 30) # Imprime uma linha para separar
 
+# --- Cálculos ---
 
-# Verifica se a lista não está vazia para evitar erro de divisão por zero
-if temperaturas:
-  # a) Calcula a média da semana
-  # sum(temperaturas) soma todos os itens da lista
-  # len(temperaturas) conta quantos itens existem na lista
-  media_semanal = sum(temperaturas) / len(temperaturas)
+# a) Média da semana
+# sum() soma todos os itens da lista
+# len() conta quantos itens existem na lista (sabemos que é 7)
+media_semana = sum(temperaturas) / len(temperaturas)
 
-  # b) Encontra a maior temperatura
-  maior_temperatura = max(temperaturas)
+# b) Maior temperatura
+# A função max() encontra o maior valor na lista
+maior_temp = max(temperaturas)
 
-  # c) Encontra a menor temperatura
-  menor_temperatura = min(temperaturas)
+# c) Menor temperatura
+# A função min() encontra o menor valor na lista
+menor_temp = min(temperaturas)
 
-  # Exibe os resultados formatados
-  print("\n--- Resultados ---")
-  print(f"A média de temperatura da semana foi: {media_semanal:.2f}°C")
-  print(f"A maior temperatura registrada foi: {maior_temperatura}°C")
-  print(f"A menor temperatura registrada foi: {menor_temperatura}°C")
-else:
-  print("Nenhuma temperatura foi registrada para calcular os resultados.")
+# --- Exibição dos Resultados ---
 
-
+print(f"Temperaturas registradas: {temperaturas}")
+print(f"a) Média da semana: {media_semana:.2f}°C") # .2f formata para 2 casas decimais
+print(f"b) Maior temperatura: {maior_temp}°C")
+print(f"c) Menor temperatura: {menor_temp}°C")
