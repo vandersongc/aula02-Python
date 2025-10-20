@@ -1,8 +1,0 @@
-'''
-Desafio 3 – Simulador de Caixa Eletrônico
-Peça um valor de saque. Use while para calcular quantas cédulas de 100, 50, 20 e 10 reais são necessárias. Exiba o detalhamento do saque.(Exemplo: “2 notas de 100, 1 nota de 50, 1 nota de 20…")
-'''
-
-print("--- Caixa Eletrônico ---")
-print("Cédulas disponíveis: R$100, R$50, R$20 e R$10")
-print("-" * 50)

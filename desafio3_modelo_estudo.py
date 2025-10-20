@@ -34,6 +34,8 @@ while True:
 
 print("-" * 40)
 
+valor_restante = valor_saque
+
 # --- 2. Lógica do Cálculo (Usando WHILE) ---
 
 # É bom guardar o valor original para mostrar no final

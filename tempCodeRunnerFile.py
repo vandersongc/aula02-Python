@@ -1,2 +1,1 @@
-print("--- Caixa Eletrônico ---")
-print("Cédulas disponíveis: R$100, R$50, R$20 e R$10")
+print(f"Para sacar R$ {valor_saque:.2f}, você receberá:")
