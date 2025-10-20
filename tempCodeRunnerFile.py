@@ -1,1 +1,0 @@
-print(f"Para sacar R$ {valor_saque:.2f}, você receberá:")
